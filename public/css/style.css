@@ -1,0 +1,13 @@
+body {
+  background-color: #ecf0f1;
+  /*height: 200px;*/
+}
+
+.inner-container {
+  position: relative;
+  top: -200px;
+  background-color:yellow;
+  width: 70%;
+  margin-left: 10px;
+  /*margin-left: 70px;*/
+}

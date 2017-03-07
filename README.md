@@ -1,0 +1,1 @@
+This is the kitchen App for  [Meltwater Entrepreneurial School of Technology](https://meltwater.org).
