@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import image from '../../public/images/jollof.jpg';
+// import image from '../../public/images/jollof.jpg';
 
 class MealsCard extends Component {
   render() {
 
+    var mealsInfo = this.props.mealsInfo;
+    console.log(mealsInfo)
     var imageStyle = {
       borderTopRightRadius: 10,
       borderTopLeftRadius: 10,
@@ -30,16 +32,24 @@ class MealsCard extends Component {
 
 
     return (
-      <div className="col-lg-12">
-        <div style={mainCard}>
-          <div>
-            <img style={imageStyle} src={image} alt="profile" />
+      <div>
+      {mealsInfo.map((info) => {
+        return (
+          <div className="col-lg-6">
+            <div style={mainCard}>
+              <div>
+                <img style={imageStyle} src={info.image} alt="profile" />
+              </div>
+              {/* <h4>Chicken wings</h4> */}
+              <h4>{info.heading}</h4>
+              <hr style={horizontalStyle}></hr>
+              {/* <p>Chicken Wings are made from chicken wings</p> */}
+              <p>{info.text}</p>
+            </div>
           </div>
-          <h4>Chicken wings</h4>
-          <hr style={horizontalStyle}></hr>
-          <p>Chicken Wings are made from chicken wings</p>
-        </div>
-      </div>
+        )
+      })}
+    </div>
     )
   }
 }

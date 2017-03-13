@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
 import logo from './mestlogo.png';
+import Link from 'react-router';
+// import SelectMeals from './SelectMeals';
 
 class SignUp extends Component {
   render() {
 
-    // var headerStyle = {
-    //   textAlign: 'center',
-    // }
-    //
-    // var imageStyle = {
-    //   marginTop: 50,
-    //   width: 700,
-    //   margin: '0 auto'
-    //   // marginLeft:
-    // }
-    //
-    // var emailStyle = {
-    //   marginTop: 50
-    // }
     var signInStyle = {
       width: '25%',
       margin: 'auto',
@@ -28,12 +16,10 @@ class SignUp extends Component {
 
     var imageStyle ={
       marginTop: 30
-
     }
 
     var emailStyle = {
       marginTop: 30,
-
     }
 
     var buttonStyle = {
@@ -70,7 +56,11 @@ class SignUp extends Component {
 
           <div className="row">
             <div className="col-lg-12">
-                <button style={buttonStyle} className="btn btn-primary">Sign In</button>
+                {/* <Link to='/selectmeals'> */}
+                  <button style={buttonStyle} className="btn btn-primary">Sign In</button>
+                {/* SelectMeals */}
+                {/* </Link> */}
+
             </div>
           </div>
 

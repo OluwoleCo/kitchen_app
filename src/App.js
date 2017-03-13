@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 // import MealCard from './components/MealCard';
 // import SideBar from './components/SideBar';
-// import SignUp from './components/SignUp';
+import SignUp from './components/SignUp';
 // import MealsCard from './components/MealsCard';
-import DailyMeals from './components/DailyMeals';
+// import DailyMeals from './components/DailyMeals';
 // import MealList from './components/MealList';
-
+import SelectMeals from './components/SelectMeals';
+import NotFound from './components/NotFound';
+import { Router, Route, hashHistory } from 'react-router';
 
 class App extends Component {
   render() {
@@ -17,10 +19,11 @@ class App extends Component {
     // }
     return (
       <div className="row">
-        {/* <SignUp /> */}
-        {/* <MealsCard /> */}
-        <DailyMeals />
-        {/* <MealList /> */}
+        <Router history={hashHistory}>
+          <Route path='/' component={SignUp} />
+          <Route path='selectmeals' component={SelectMeals} />
+          <Route path='*' component={NotFound} />
+        </Router>
       </div>
     );
   }
