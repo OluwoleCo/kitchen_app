@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-// import MealCard from './components/MealCard';
-// import SideBar from './components/SideBar';
+
 import SignUp from './components/SignUp';
-// import MealsCard from './components/MealsCard';
-// import DailyMeals from './components/DailyMeals';
-// import MealList from './components/MealList';
-import SelectMeals from './components/SelectMeals';
+
+import MondayLunch from './components/MondayLunch';
+import MondayDinner from './components/MondayDinner';
+import TuesdayLunch from './components/TuesdayLunch';
+import TuesdayDinner from './components/TuesdayDinner';
+// import SelectMeals from './components/SelectMeals';
 import NotFound from './components/NotFound';
 import { Router, Route, hashHistory } from 'react-router';
 
@@ -20,10 +21,15 @@ class App extends Component {
     return (
       <div className="row">
         <Router history={hashHistory}>
-          <Route path='/' component={SignUp} />
-          <Route path='selectmeals' component={SelectMeals} />
+          <Route path='/signin' component={SignUp} />
+          <Route path='/mondaylunch' component={MondayLunch} />
+          <Route path='/mondaydinner' component={MondayDinner} />
+          <Route path='/tuesdaylunch' component={TuesdayLunch} />
+          <Route path='/tuesdaydinner' component={TuesdayDinner} />
+
           <Route path='*' component={NotFound} />
         </Router>
+
       </div>
     );
   }
