@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
-
+// import image from '../../public/images/mestlogo.png'
 class SideBar extends Component {
   render() {
+
 
     var sideBarStyle = {
       backgroundColor: 'blue',

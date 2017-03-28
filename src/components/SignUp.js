@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './mestlogo.png';
-import Link from 'react-router';
 // import SelectMeals from './SelectMeals';
 
 class SignUp extends Component {
