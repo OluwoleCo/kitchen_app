@@ -20,4 +20,4 @@ class DashBoard extends Component {
   }
 }
 
-export default DashBoard
+export default DashBoard;
